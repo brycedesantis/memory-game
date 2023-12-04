@@ -1,9 +1,6 @@
 import { useState } from "react"
 
-function Nav() {
-	const [count, setCount] = useState(0)
-	const [highScore, setHighScore] = useState(0)
-
+function Nav({ count, highScore }) {
 	return (
 		<>
 			<header>
