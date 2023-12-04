@@ -60,12 +60,24 @@ function App() {
 		setPokemon(clickable)
 	}
 
+	function resetCards() {
+		const toReset = [...pokemon]
+		toReset.map((card) => (card.isClicked = false))
+		setFlipped(true)
+		setPokemon(toReset)
+		setCount(0)
+		setTimeout(() => {
+			setFlipped(false)
+			shufflePokemon()
+		}, 500)
+	}
+
 	function flipCard(index) {
 		setFlipped(true)
 
 		const card = pokemon[index]
 		if (card.isClicked) {
-			alert("already clicked")
+			return resetCards()
 		}
 
 		clickedCards(index)
@@ -82,7 +94,7 @@ function App() {
 	}
 
 	useEffect(() => {
-		getRandomPoke(5)
+		getRandomPoke(12)
 	}, [])
 
 	const pokeElements = pokemon.map((entry, index) => {

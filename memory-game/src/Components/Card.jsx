@@ -1,4 +1,3 @@
-import { useState } from "react"
 import pokeLogo from "../assets/pokemon-23.svg"
 
 function Card({ name, imageSrc, flipCard, flipped }) {

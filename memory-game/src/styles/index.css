@@ -11,6 +11,11 @@
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+
+	--pokemon-blue: #3b4cca;
+	--pokemon-yellow: #ffde00;
+	--pokemon-red: #cc0000;
+	--pokemon-border-yellow: #b3a125;
 }
 
 a {
@@ -23,9 +28,12 @@ a:hover {
 }
 
 body {
+	font-family: Pokemon-solid;
+	color: var(--pokemon-yellow);
 	margin: 0;
 	min-width: 320px;
 	min-height: 100vh;
+	overflow: hidden;
 }
 
 h1 {
